@@ -21,7 +21,7 @@ export const PromotionalEmail = ({ name }: PromotionalEmailProps) => {
             {/* Banner Image */}
             <Section className='mb-6'>
               <Img
-                src='/boabanner1.png'
+                src='https://uhjmov2z88.ufs.sh/f/GcrbJaQ27xlRgHRHyWdOluAeEdSNm7BWxVzyIfstjhYCTRQo'
                 alt='Battle on Air Welcome Banner'
                 width='600'
                 height='200'
@@ -81,7 +81,6 @@ export const PromotionalEmail = ({ name }: PromotionalEmailProps) => {
             {/* Footer */}
             <Section className='border-t border-gray-300 pt-4 text-center text-[12px] text-gray-600'>
               <Text className='mb-2'>
-                
                 <Link
                   href='https://tiktok.com/battleonair'
                   className='mx-1 text-gray-600 no-underline'

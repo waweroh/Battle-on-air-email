@@ -13,6 +13,7 @@ import {
   Img,
   Link,
 } from "@react-email/components";
+import Image from 'next/image';
 
 interface WelcomeEmailProps {
   name: string;
@@ -34,7 +35,7 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             {/* Banner Image */}
             <Section className='mb-6'>
               <Img
-                src='/boabanner1.png'
+                src='https://uhjmov2z88.ufs.sh/f/GcrbJaQ27xlRgHRHyWdOluAeEdSNm7BWxVzyIfstjhYCTRQo'
                 alt='Battle on Air Welcome Banner'
                 width='600'
                 height='200'
@@ -42,7 +43,7 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
               />
             </Section>
             {/* Header / Welcome Greeting */}
-            
+
             {/* <Text className='text-[14px] mb-4'>
               Hi {name},<br />
               I’m **Alex**, the founder of Battle on Air. I’m thrilled to have
@@ -58,7 +59,7 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             </Heading>
             <Section className='mb-6'>
               <Img
-                src='/crewleague.png'
+                src='https://uhjmov2z88.ufs.sh/f/GcrbJaQ27xlRoJhH0JwNkx8T4uO3C0lrEV9eRpiKFQszWAyH'
                 alt='Crew League Banner'
                 width='600'
                 height='200'
@@ -84,19 +85,28 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             <Section className='bg-[#e4fde1] p-6 rounded-lg mb-6 mt-5 relative overflow-visible'>
               <Text className='text-[16px] italic text-[#114b5f] leading-[24px] text-center'>
                 “The best part about Battle on Air isn’t just the trivia – it’s
-                the community we’re building together.”
+                the community we’re building together”
                 <br />
                 <strong>- Alex, Founder</strong>
               </Text>
 
               {/* Founder’s Avatar Half-Inside Bubble */}
-              <Img
-                src='https://images.unsplash.com/photo-1707676602290-acfdedc6b41d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt='Founder Avatar'
-                width='60'
-                height='60'
-                className='absolute bottom-[-30px] right-4 rounded-full border-2 border-[#4bb8ff] object-cover ring-2 ring-white aspect-square'
-              />
+              <div style={{ textAlign: "right", marginTop: "-30px", paddingBottom: "24px"}}>
+                <Img
+                  src='https://uhjmov2z88.ufs.sh/f/GcrbJaQ27xlRsYfY1JAEZxoIikRCzgK1V2Lc3bwWUHQleEM7'
+                  alt='Founder Avatar'
+                  width='60'
+                  height='60'
+                  style={{
+                    borderRadius: "50%",
+                    marginBottom: "-50px",
+                    width: "60px",
+                    height: "60px",
+                    border: "2px solid #4bb8ff",
+                    display: "inline-block",
+                  }}
+                />
+              </div>
             </Section>
             {/* Support and Closing */}
             <Text className='text-[14px] mb-4 mt-10'>
@@ -120,7 +130,6 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             <Section className='border-t border-gray-300 pt-4 text-center text-[12px] text-gray-600'>
               {/* Social media icons (using placeholder URLs and alt text) */}
               <Text className='mb-2'>
-                
                 <Link
                   href='https://tiktok.com/battleonair'
                   className='mx-1 text-gray-600 no-underline'
