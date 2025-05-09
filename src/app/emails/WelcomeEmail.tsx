@@ -33,16 +33,18 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
           <Container className='mx-auto my-0 p-4 w-[600px]'>
             {/* Banner Image */}
             <Section className='mb-6'>
-              <Img
-                src='/boabanner1.png'
-                alt='Battle on Air Welcome Banner'
-                width='600'
-                height='200'
-                className='w-full rounded-lg'
-              />
+              <a href='#'>
+                <Img
+                  src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1746789746/vtrbjayqc8qvockn5kqf.png'
+                  alt='Battle on Air Welcome Banner'
+                  width='600'
+                  height='200'
+                  className='w-full rounded-lg g-img'
+                />
+              </a>
             </Section>
             {/* Header / Welcome Greeting */}
-            
+
             {/* <Text className='text-[14px] mb-4'>
               Hi {name},<br />
               I’m **Alex**, the founder of Battle on Air. I’m thrilled to have
@@ -57,13 +59,15 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
               🚩 Crew League – Play in Teams!
             </Heading>
             <Section className='mb-6'>
-              <Img
-                src='/crewleague.png'
-                alt='Crew League Banner'
-                width='600'
-                height='200'
-                className='w-full rounded-lg'
-              />
+              <a href='#'>
+                <Img
+                  src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1746789788/vmy5iy79cpuco65at0am.png'
+                  alt='Crew League Banner'
+                  width='600'
+                  height='200'
+                  className='w-full rounded-lg g-img'
+                />
+              </a>
             </Section>
             <Text className='text-[14px] mb-4'>
               The Crew League lets you team up with friends and compete
@@ -74,16 +78,18 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             </Text>
             {/* Call-to-Action Button to Join Crew League */}
             <Section className='text-center mb-6'>
-              <Button
-                href='https://battleonair.com/crew-league'
-                className='bg-[#ffa332] text-[#114b5f] text-[16px] font-bold py-3 px-6 rounded no-underline'
-              >
-                Join the Crew League
-              </Button>
+              <a href='https://www.battleonair.com/league'>
+                <Button
+                  href='https://battleonair.com/crew-league'
+                  className='bg-[#ffa332] text-[#114b5f] text-[16px] font-bold py-3 px-6 rounded no-underline'
+                >
+                  Join the Crew League
+                </Button>
+              </a>
             </Section>
             <Section className='bg-[#e4fde1] p-6 rounded-lg mb-6 mt-5 relative overflow-visible'>
               <Text className='text-[16px] italic text-[#114b5f] leading-[24px] text-center'>
-                “The best part about Battle on Air isn’t just the trivia – it’s
+                “ The best part about Battle on Air isn’t just the trivia – it’s
                 the community we’re building together.”
                 <br />
                 <strong>- Alex, Founder</strong>
@@ -91,11 +97,11 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
 
               {/* Founder’s Avatar Half-Inside Bubble */}
               <Img
-                src='https://images.unsplash.com/photo-1707676602290-acfdedc6b41d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1746789886/sfb0rewtmhvwaxujt2b0.jpg'
                 alt='Founder Avatar'
                 width='60'
                 height='60'
-                className='absolute bottom-[-30px] right-4 rounded-full border-2 border-[#4bb8ff] object-cover ring-2 ring-white aspect-square'
+                className='absolute bottom-[-30px] right-4 rounded-full border-2 border-[#4bb8ff] object-cover ring-2 ring-white aspect-square g-img'
               />
             </Section>
             {/* Support and Closing */}
@@ -120,7 +126,6 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             <Section className='border-t border-gray-300 pt-4 text-center text-[12px] text-gray-600'>
               {/* Social media icons (using placeholder URLs and alt text) */}
               <Text className='mb-2'>
-                
                 <Link
                   href='https://tiktok.com/battleonair'
                   className='mx-1 text-gray-600 no-underline'

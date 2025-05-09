@@ -20,13 +20,15 @@ export const PromotionalEmail = ({ name }: PromotionalEmailProps) => {
           <Container className='mx-auto p-4 w-[600px]'>
             {/* Banner Image */}
             <Section className='mb-6'>
-              <Img
-                src='/boabanner1.png'
-                alt='Battle on Air Welcome Banner'
-                width='600'
-                height='200'
-                className='w-full rounded-lg'
-              />
+              <a href="">
+                <Img
+                  src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1746789746/vtrbjayqc8qvockn5kqf.png'
+                  alt='Battle on Air Welcome Banner'
+                  width='600'
+                  height='200'
+                  className='w-full rounded-lg'
+                />
+              </a>
             </Section>
             {/* Header / Feature Announcement */}
             <Heading className='text-[22px] font-bold text-[#114b5f] mb-4'>
@@ -81,7 +83,6 @@ export const PromotionalEmail = ({ name }: PromotionalEmailProps) => {
             {/* Footer */}
             <Section className='border-t border-gray-300 pt-4 text-center text-[12px] text-gray-600'>
               <Text className='mb-2'>
-                
                 <Link
                   href='https://tiktok.com/battleonair'
                   className='mx-1 text-gray-600 no-underline'

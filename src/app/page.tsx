@@ -2,7 +2,7 @@
 import { WelcomeEmail } from "./emails/WelcomeEmail";
 import { PromotionalEmail } from "./emails/PromotionalEmail";
 import { WeeklyNewsletterEmail } from "./emails/WeeklyNews";
-
+import { CldUploadButton } from "next-cloudinary";
 export default function Home() {
   const sendEmail = async () => {
     try {
@@ -37,6 +37,10 @@ export default function Home() {
           Send Test Email
         </button>
       </div>
+
+      <main>
+        <CldUploadButton uploadPreset='battleonair' />
+      </main>
 
       <section>
         <h2 className='text-xl font-bold mb-4'>Welcome Email Preview</h2>
