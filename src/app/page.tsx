@@ -1,9 +1,14 @@
 "use client";
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
 import { WelcomeEmail } from "./emails/WelcomeEmail";
-import { PromotionalEmail } from "./emails/PromotionalEmail";
-import { WeeklyNewsletterEmail } from "./emails/WeeklyNews";
+import { PromotionalEmail } from "./emails/promotionalEmail";
+import { WeeklyNewsletterEmail } from "./emails/weeklyNews";
 import { CldUploadButton } from "next-cloudinary";
-export default function Home() {
+
+export default function Page() {
+  const subscribers = useQuery(api.subscribers.getSubscribers);
+
   const sendEmail = async () => {
     try {
       const response = await fetch("/api/emails", {
@@ -62,6 +67,11 @@ export default function Home() {
           <WeeklyNewsletterEmail name='John Doe' />
         </div>
       </section>
+
+      <div>
+        <h1>Subscribers</h1>
+        {subscribers?.map((sub) => <div key={sub._id}>{sub.email}</div>)}
+      </div>
     </div>
   );
 }
