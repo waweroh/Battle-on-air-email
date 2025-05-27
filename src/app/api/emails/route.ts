@@ -1,3 +1,5 @@
+import PromotionalEmail from "@/app/emails/promotionalEmail";
+import WeeklyNewsletterEmail from "@/app/emails/weeklyNews";
 import { WelcomeEmail } from "@/app/emails/WelcomeEmail";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
@@ -14,7 +16,7 @@ export async function POST(request: Request) {
       from: "Acme <onboarding@resend.dev>",
       to: ["scadmsez@gmail.com"],
       subject: "Welcome",
-      react: WelcomeEmail({ name }),
+      react:WeeklyNewsletterEmail({ name }),
     });
 
     if (error) {
