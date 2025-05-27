@@ -20,7 +20,7 @@ export const PromotionalEmail = ({ name }: PromotionalEmailProps) => {
           <Container className='mx-auto p-4 w-[600px]'>
             {/* Banner Image */}
             <Section className='mb-6'>
-              <a href="">
+              <a href="#">
                 <Img
                   src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1746789746/vtrbjayqc8qvockn5kqf.png'
                   alt='Battle on Air Welcome Banner'
@@ -115,7 +115,7 @@ export const PromotionalEmail = ({ name }: PromotionalEmailProps) => {
                 at any time.
               </Text>
               <Text>
-                © 2025 Battle on Air • 123 Trivia Way, New York, NY 10001
+                © 2025 Battle on Air • 
               </Text>
             </Section>
           </Container>

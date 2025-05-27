@@ -12,9 +12,38 @@ export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsle
 
   // Example schedule data – in practice this might be passed in or fetched
   const schedule = [
-    { day: "Monday", date: "April 28", time: "7:00 PM ", theme: "General Knowledge" },
-    { day: "Wednesday", date: "April 30", time: "7:00 PM ", theme: "Movie Trivia Night" },
-    { day: "Saturday", date: "May 3", time: "6:00 PM ", theme: "Sports Special" },
+    { day: "Tuesday", date: "May 20", time: "12:00 PM ", theme: "Logo" },
+
+    {
+      day: "",
+      date: "",
+      time: "9:00 PM ",
+      theme: "Global Geography",
+    },
+    {
+      day: "Thursday",
+      date: "May 22",
+      time: "3:00 PM ",
+      theme: "Odd one out ",
+    },
+    {
+      day: "",
+      date: "",
+      time: "9:00 PM ",
+      theme: "Know your Flags",
+    },
+    {
+      day: "Sunday",
+      date: "May 25",
+      time: "3:00 PM ",
+      theme: "True or False",
+    },
+    {
+      day: "",
+      date: "",
+      time: "9:00 PM ",
+      theme: "Bible Trivia",
+    },
   ];
 
   return (
@@ -31,18 +60,18 @@ export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsle
             <Section className='mb-6'>
               <a href='#'>
                 <Img
-                  src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1747741635/jla5buacmdr73cojo1rk.png'
+                  src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1747820315/db3oyhplr27iek6vms5h.png'
                   alt='Battle on Air Welcome Banner'
                   width='600'
                   height='200'
-                  className='w-full rounded-lg'
+                  className='w-full rounded-lg bg-cover bg-center h-32 '
                 />
               </a>
             </Section>
             {/* Header */}
-            <Heading className='text-[20px] font-bold text-[#114b5f] mb-4'>
+            {/* <Heading className='text-[20px] font-bold text-[#114b5f] mb-4'>
               Hey here’s your weekly trivia update! 🗞️
-            </Heading>
+            </Heading> */}
             {/* Crew League Reminder/Status */}
             <Section className='mb-4'>
               {crewName ? (
@@ -53,20 +82,71 @@ export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsle
                   Every game you play earns crew points.
                 </Text>
               ) : (
-                <Text className='text-[14px] mb-2'>
-                  <strong>Crew League:</strong> Join a crew to compete as a
-                  team! Team up with friends to earn points and win collective
-                  prizes. It’s more fun together –{" "}
-                  <Link
-                    href='https://battleonair.com/crew-league'
-                    className='text-[#4bb8ff] no-underline'
-                  >
-                    learn more and join a crew here
-                  </Link>
-                  .
+                <Text className='text-[14px] mb-2 text-gray-800'>
+                  <strong>
+                    🏆 "Crew League’s heating up — and your crew needs a hero
+                    (yes, you)!"
+                  </strong>{" "}
+                  This week on BattleOnAir, the trivia battlefield is buzzing
+                  and crews are climbing. Whether you're leading the charge or
+                  just here for good vibes and guesses, every round earns
+                  points. Show up, rep your crew, and let’s turn trivia into
+                  triumph! 🎯🔥 .
                 </Text>
               )}
             </Section>
+
+            {/* Call-to-Action (optional, e.g., view full schedule) */}
+
+            <Section className='text-center mb-12'>
+              <Button
+                href='https://battleonair.com/league'
+                className='bg-[#ffa332] text-[#114b5f] text-[14px] font-semibold py-4 px-4 rounded no-underline'
+              >
+                Join the Crew League Now
+              </Button>
+            </Section>
+
+            {/* riddle */}
+
+            <Section
+              style={{
+                backgroundColor: "#e4fde1",
+                padding: "24px",
+                borderRadius: "12px",
+                marginTop: "20px",
+                marginBottom: "24px",
+                textAlign: "center",
+              }}
+            >
+              {/* Founder Introduction */}
+              <Text
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  color: "#114b5f",
+                  marginBottom: "16px",
+                }}
+              >
+                Riddle me this:
+              </Text>
+
+              {/* Founder Message */}
+              <Text
+                style={{
+                  fontSize: "16px",
+                  fontStyle: "italic",
+                  color: "#114b5f",
+                  lineHeight: "24px",
+                  textAlign: "center",
+                }}
+              >
+                🧩 I have cities, but no houses. I have mountains, but no trees.
+                I have water, but no fish. You can travel across me, but you’ll
+                never leave your seat. What am I?
+              </Text>
+            </Section>
+
             {/* This Week's Schedule */}
             <Section className='mb-4'>
               <Heading className='text-[18px] font-semibold text-black mb-2'>
@@ -87,32 +167,22 @@ export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsle
                 <tbody>
                   {schedule.map((game, idx) => (
                     <tr key={idx} className='odd:bg-white even:bg-[#fafafa]'>
-                      <td className='border border-gray-600 px-3 py-2'>
+                      <td className='border border-gray-800 px-3 py-2'>
                         {game.day}
                       </td>
-                      <td className='border border-gray-600 px-3 py-2'>
+                      <td className='border border-gray-800 px-3 py-2'>
                         {game.date}
                       </td>
-                      <td className='border border-gray-600 px-3 py-2'>
+                      <td className='border border-gray-800 px-3 py-2'>
                         {game.time}
                       </td>
-                      <td className='border border-gray-600 px-3 py-2'>
+                      <td className='border border-gray-800 px-3 py-2'>
                         {game.theme}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-            </Section>
-
-            {/* Call-to-Action (optional, e.g., view full schedule) */}
-            <Section className='text-center mb-6'>
-              <Button
-                href='https://battleonair.com/schedule'
-                className='bg-[#ffa332] text-[#114b5f] text-[14px] font-semibold py-2 px-4 rounded no-underline'
-              >
-                View Full Schedule
-              </Button>
             </Section>
 
             {/* Divider Line */}
@@ -127,74 +197,6 @@ export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsle
             </Section>
 
             {/* other trivia games  */}
-
-            <Section className='mb-6'>
-              <Heading className='text-[16px] font-medium text-gray-700 mb-2'>
-                🔍 Other Trivia You Might Like:
-              </Heading>
-              <table className='w-full border border-collapse text-left text-[13px]'>
-                <thead>
-                  <tr className='bg-[#f9f9f9]'>
-                    <th className='border border-gray-200 px-3 py-2 text-gray-600'>
-                      Day
-                    </th>
-                    <th className='border border-gray-200 px-3 py-2 text-gray-600'>
-                      Event
-                    </th>
-                    <th className='border border-gray-200 px-3 py-2 text-gray-600'>
-                      Time
-                    </th>
-                    <th className='border border-gray-200 px-3 py-2 text-gray-600'>
-                      Platform
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className='bg-white'>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      Tuesday
-                    </td>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      Trivia Titans: Music Madness
-                    </td>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      8:30 PM
-                    </td>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      <Link
-                        href='https://triviatitans.com'
-                        className='text-[#4bb8ff] underline'
-                      >
-                        TriviaTitans.com
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr className='bg-[#fdfdfd]'>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      Thursday
-                    </td>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      BrainBrawl: Science Slam
-                    </td>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      9:00 PM
-                    </td>
-                    <td className='border border-gray-200 px-3 py-2'>
-                      <Link
-                        href='https://brainbrawl.io'
-                        className='text-[#4bb8ff] underline'
-                      >
-                        BrainBrawl.io
-                      </Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <Text className='text-[12px] italic text-gray-500 mt-2'>
-                Note: These are external trivia events we think you might enjoy.
-                BattleOnAir is not affiliated with these platforms.
-              </Text>
-            </Section>
 
             {/* Support and Footer */}
             <Text className='text-[14px] mb-4'>
@@ -212,21 +214,14 @@ export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsle
             <Section className='border-t border-gray-300 pt-4 text-center text-[12px] text-gray-600'>
               <Text className='mb-2'>
                 <Link
-                  href='https://tiktok.com/battleonair'
+                  href='https://www.tiktok.com/search?q=battle%20on%20air&t=1747836175901'
                   className='mx-1 text-gray-600 no-underline'
                 >
                   Tiktok
                 </Link>{" "}
                 |
                 <Link
-                  href='https://twitter.com/battleonair'
-                  className='mx-1 text-gray-600 no-underline'
-                >
-                  Twitter
-                </Link>{" "}
-                |
-                <Link
-                  href='https://instagram.com/battleonair'
+                  href='https://www.instagram.com/battleonair_/'
                   className='mx-1 text-gray-600 no-underline'
                 >
                   Instagram
