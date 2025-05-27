@@ -1,3 +1,5 @@
+import PromotionalEmail from "@/app/emails/promotionalEmail";
+import WeeklyNewsletterEmail from "@/app/emails/weeklyNews";
 import { WelcomeEmail } from "@/app/emails/WelcomeEmail";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
