@@ -13,6 +13,7 @@ import {
   Img,
   Link,
 } from "@react-email/components";
+import Image from 'next/image';
 
 interface WelcomeEmailProps {
   name: string;
@@ -44,6 +45,7 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
               </a>
             </Section>
             {/* Header / Welcome Greeting */}
+
 
             {/* <Text className='text-[14px] mb-4'>
               Hi {name},<br />
