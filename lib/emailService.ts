@@ -1,33 +1,50 @@
-import { Resend } from "resend";
-import { WeeklyNewsletterEmail } from "@/app/emails/weeklyNews";
-import { WelcomeEmail } from "@/app/emails/WelcomeEmail";
-import { PromotionalEmail } from "@/app/emails/promotionalEmail";
+// import { Resend } from "resend";
+// import { render } from '@react-email/render';
+// // Fix imports to be static
+// import { WeeklyNewsletterEmail } from "../src/app/emails/weeklyNews";
+// import { WelcomeEmail } from "../src/app/emails/WelcomeEmail";
+// import { PromotionalEmail } from "../src/app/emails/promotionalEmail";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
-export type EmailType = "welcome" | "weekly-newsletter" | "promotional";
+// export type EmailType = "welcome" | "weekly-newsletter" | "promotional";
 
-export async function sendEmail({ 
-  to, 
-  name, 
-  type 
-}: { 
-  to: string; 
-  name: string; 
-  type: EmailType;
-}) {
-  const emailComponents = {
-    welcome: WelcomeEmail,
-    "weekly-newsletter": WeeklyNewsletterEmail,
-    promotional: PromotionalEmail
-  };
+// export async function sendEmail({ 
+//   to, 
+//   name, 
+//   type 
+// }: { 
+//   to: string; 
+//   name: string; 
+//   type: EmailType;
+// }) {
+//   try {
+//     // Use direct component reference instead of dynamic import
+//     let EmailTemplate;
+//     switch (type) {
+//       case "welcome":
+//         EmailTemplate = WelcomeEmail;
+//         break;
+//       case "weekly-newsletter":
+//         EmailTemplate = WeeklyNewsletterEmail;
+//         break;
+//       case "promotional":
+//         EmailTemplate = PromotionalEmail;
+//         break;
+//       default:
+//         throw new Error(`Unknown email type: ${type}`);
+//     }
 
-  const EmailComponent = emailComponents[type];
+//     const html = await render(EmailTemplate({ name }));
 
-  return await resend.emails.send({
-    from: "Acme <onboarding@resend.dev>",
-    to: [to],
-    subject: `${type.charAt(0).toUpperCase() + type.slice(1)} Email`,
-    react: EmailComponent({ name }),
-  });
-}
+//     return await resend.emails.send({
+//       from: "Battle on Air <onboarding@resend.dev>",
+//       to: [to],
+//       subject: `${type.charAt(0).toUpperCase() + type.slice(1)} Email`,
+//       html
+//     });
+//   } catch (error) {
+//     console.error('Email sending error:', error);
+//     throw error;
+//   }
+// }
