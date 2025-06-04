@@ -7,7 +7,7 @@ interface WeeklyNewsletterProps {
   crewRank?: number;
 }
 
-export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsletterProps) => {
+export const WeeklyNewsletterEmail = ({ crewName, crewRank }: WeeklyNewsletterProps) => {
   const previewText = "This week’s trivia lineup is here! Don’t miss our upcoming games.";
 
   // Example schedule data – in practice this might be passed in or fetched
@@ -82,17 +82,21 @@ export const WeeklyNewsletterEmail = ({ name, crewName, crewRank }: WeeklyNewsle
                   Every game you play earns crew points.
                 </Text>
               ) : (
+                // ...existing code...
+
                 <Text className='text-[14px] mb-2 text-gray-800'>
                   <strong>
-                    🏆 "Crew League’s heating up — and your crew needs a hero
-                    (yes, you)!"
+                    🏆 &quot;Crew League&apos;s heating up — and your crew needs
+                    a hero (yes, you)!&quot;
                   </strong>{" "}
                   This week on BattleOnAir, the trivia battlefield is buzzing
-                  and crews are climbing. Whether you're leading the charge or
-                  just here for good vibes and guesses, every round earns
-                  points. Show up, rep your crew, and let’s turn trivia into
-                  triumph! 🎯🔥 .
+                  and crews are climbing. Whether you&apos;re leading the charge
+                  or just here for good vibes and guesses, every round earns
+                  points. Show up, rep your crew, and let&apos;s turn trivia
+                  into triumph! 🎯🔥
                 </Text>
+
+                // ...existing code...
               )}
             </Section>
 

@@ -10,7 +10,6 @@ import {
   Heading,
   Text,
   Button,
-  Img,
   Link,
 } from "@react-email/components";
 import Image from 'next/image';
@@ -35,7 +34,7 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             {/* Banner Image */}
             <Section className='mb-6'>
               <a href='#'>
-                <Img
+                <Image
                   src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1746789746/vtrbjayqc8qvockn5kqf.png'
                   alt='Battle on Air Welcome Banner'
                   width='600'
@@ -62,7 +61,7 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             </Heading>
             <Section className='mb-6'>
               <a href='#'>
-                <Img
+                <Image
                   src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1746789788/vmy5iy79cpuco65at0am.png'
                   alt='Crew League Banner'
                   width='600'
@@ -119,7 +118,7 @@ export const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                 <tr>
                   <td align='center'>
                     <a href='#'>
-                      <img
+                      <Image
                         src='https://res.cloudinary.com/dhhhrvooa/image/upload/v1747362875/vqvibovknumesd4jqexj.jpg'
                         alt='Founder Avatar'
                         width='184'
